@@ -4,8 +4,8 @@ const moneyBox = (coins) => {
     saveCoins += coins;
     console.log(`Money box: $${saveCoins}`);
 };
-moneyBox(5);
-moneyBox(10);
+moneyBox(5);  // 5
+moneyBox(10); // 10
 //No registra el ingreso total de monedas.
 
 
@@ -63,11 +63,16 @@ const banco = (ta = false) => {
         console.log(`Saldo actual: $${saldo}`);
         console.log()
     };
-    return addCoins;
+
+    const serAmigo = () => {
+        tarjetaAmigo = true
+    }
+    return { addCoins, serAmigo };
 };
 
 let banquito = banco();
-banquito(10);
-banquito(10);
-banquito(-30);
-banquito(-30);
+banquito.addCoins(10);
+banquito.addCoins(10);
+banquito.addCoins(-30);
+banquito.serAmigo();
+banquito.addCoins(-30);

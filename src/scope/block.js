@@ -24,7 +24,7 @@ let x = 1
     // Con let existe una distinción entre la variable 
     // interna del bloque y la externa
 }
-console.log(x);
+console.log(x); //1 
 
 
 var x = 1
@@ -34,7 +34,7 @@ var x = 1
     // Con var la variable x se altera tanto por dentro 
     // como por fuera del bloque
 }
-console.log(x);
+console.log(x); //2
 
 
 // En caso de que la variable i sea un var la impresión 
